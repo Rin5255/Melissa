@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Кондитерский дом «Мелисса» — Бугульма</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#FDFBF7;--ac:#C86D75;--tx:#3B2621;--card:#F6EFEA;--mut:#7a625b;--ln:#e8dcd4;--btn:#3B2621;--btnt:#FDFBF7;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1412;--tx:#f5ebe4;--card:#2b1f1c;--mut:#bfa89f;--ln:#44332e;--btn:#C86D75;--btnt:#fff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1412;--tx:#f5ebe4;--card:#2b1f1c;--mut:#bfa89f;--ln:#44332e;--btn:#C86D75;--btnt:#fff;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 Manrope,Inter,system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Cormorant Garamond",Lora,Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--ln)}
+.hd{display:flex;align-items:center;gap:14px;min-height:64px}
+.logo{font-size:21px;font-weight:700;letter-spacing:.02em}.logo small{display:block;font:500 11px Manrope,sans-serif;color:var(--ac);letter-spacing:.04em}
+nav{display:none;gap:20px;margin-left:auto;font-size:14px;font-weight:500}nav a:hover{color:var(--ac)}
+.hr{margin-left:auto;display:flex;align-items:center;gap:10px}.tel{display:none;font-weight:700;font-size:14px}
+.ic{width:40px;height:40px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:13px;font-weight:700}
+.cartb{position:relative;border:0;background:var(--btn);color:var(--btnt);height:40px;padding:0 14px;border-radius:20px;font:700 14px Manrope;cursor:pointer}
+.cartb b{background:var(--ac);color:#fff;border-radius:10px;padding:1px 7px;margin-left:6px;font-size:12px}
+@media(min-width:900px){nav{display:flex}.hr{margin-left:0}.tel{display:block}}
+.btn{display:inline-block;border:0;border-radius:28px;padding:14px 24px;font:700 15px Manrope;cursor:pointer;background:var(--btn);color:var(--btnt)}
+.btn.o{background:transparent;color:var(--tx);box-shadow:inset 0 0 0 1.5px var(--tx)}.btn.a{background:var(--ac);color:#fff}
+.hero{display:grid;gap:28px;padding:36px 0 44px;align-items:center}
+.hero h1{font-size:clamp(34px,7vw,60px)}.hero p{color:var(--mut);font-size:17px;max-width:520px}.hero .bt{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.ph{aspect-ratio:1/1;border-radius:200px 200px 28px 28px;background:radial-gradient(circle at 50% 30%,#f9d9d6,#C86D75 78%);display:grid;place-items:center;font-size:clamp(90px,22vw,170px);max-width:440px;width:100%;justify-self:center}
+@media(min-width:860px){.hero{grid-template-columns:1.2fr 1fr}}
+section{padding:44px 0}h2{font-size:clamp(28px,5vw,42px);margin-bottom:8px}.sub{color:var(--mut);margin:0 0 22px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px}
+.tab{flex:none;border:0;background:var(--card);color:var(--tx);padding:9px 16px;border-radius:20px;font:500 14px Manrope;cursor:pointer}.tab.on{background:var(--ac);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.pi{height:150px;display:grid;place-items:center;font-size:68px}
+.cb{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}.cb h3{font-size:22px}.cb p{margin:0;font-size:13px;color:var(--mut);flex:1}
+.pr{display:flex;align-items:center;justify-content:space-between;margin-top:8px}.pr b{font-size:18px}.pr small{color:var(--mut)}
+.qty{display:inline-flex;align-items:center;gap:10px;background:var(--btn);color:var(--btnt);border-radius:20px;padding:3px}
+.qty button{width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:inherit;font-size:18px;cursor:pointer}
+.add{border:0;background:var(--btn);color:var(--btnt);padding:9px 16px;border-radius:20px;font:700 13px Manrope;cursor:pointer}
+.cons{background:var(--card);border-radius:28px;padding:22px}
+.step{margin-bottom:22px}.step h3{font-size:22px;margin-bottom:10px}.step h3 span{color:var(--ac)}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{border:1.5px solid var(--ln);background:var(--bg);color:var(--tx);border-radius:16px;padding:10px 14px;font:500 14px Manrope;cursor:pointer;text-align:left}
+.opt small{display:block;color:var(--mut);font-size:12px;font-weight:400}.opt.on{border-color:var(--ac);box-shadow:inset 0 0 0 1px var(--ac)}
+input,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--ln);border-radius:14px;background:var(--bg);color:var(--tx);font:16px Manrope;margin-bottom:10px}
+.two{display:grid;gap:10px}@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.tot{font:700 34px "Cormorant Garamond",serif;color:var(--ac)}
+.adv{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.adv div{padding:22px;background:var(--card);border-radius:22px}.adv i{font-style:normal;font-size:32px}.adv h3{font-size:21px;margin:8px 0 6px}.adv p{margin:0;font-size:14px;color:var(--mut)}
+.ct{display:grid;gap:22px}@media(min-width:800px){.ct{grid-template-columns:1fr 1.2fr}}
+.addr{background:var(--card);border-radius:20px;padding:18px;margin-bottom:12px}
+.map{background:var(--card);border-radius:24px;width:100%;height:100%;min-height:280px}
+footer{padding:26px 0;color:var(--mut);font-size:13px;text-align:center;border-top:1px solid var(--ln)}
+.ov{position:fixed;inset:0;background:rgba(40,20,15,.45);opacity:0;pointer-events:none;transition:.25s;z-index:30}.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);z-index:40;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;padding:18px;padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));overflow:auto}.dr.on{transform:none}
+.li{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--ln);font-size:14px}
+.md{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(380px,90%);background:var(--bg);border-radius:24px;padding:26px;z-index:50;text-align:center;display:none}.md.on{display:block}
+</style></head><body>
+<header><div class="w hd">
+<a href="#top" class="logo">Кондитерский дом МЕЛИССА<small>Бугульма • В наличии и на заказ</small></a>
+<nav><a href="#shop">Витрина десертов</a><a href="#build">Собрать торт</a><a href="#fill">Начинки</a><a href="#contacts">Адреса и доставка</a></nav>
+<div class="hr"><a class="tel" href="tel:+79172464634">+7 (917) 246-46-34</a><a class="ic" href="https://vk.ru" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+<button class="cartb" id="cb">Корзина<b id="cc">0</b></button></div></div></header>
+
+<main id="top"><div class="w">
+<div class="hero"><div><h1>Авторские торты на заказ и свежие десерты каждый день в Бугульме</h1>
+<p>Бенто-торты, меренговые рулеты, профитроли, ПП-десерты и подарочные наборы из натуральных ингредиентов. Готовим к вашему празднику или отдаем сразу с витрины.</p>
+<div class="bt"><a class="btn a" href="#build">Собрать торт на заказ</a><a class="btn o" href="#shop">Выбрать десерт в наличии</a></div></div>
+<div class="ph" role="img" aria-label="Ягодный бенто-торт">🍰</div></div>
+
+<section id="shop"><h2>Витрина десертов</h2><p class="sub">Свежее сегодня — добавьте в корзину и заберите в кондитерской.</p>
+<div class="tabs" id="tabs"></div><div class="grid" id="grid"></div></section>
+
+<section id="build"><h2>Собрать торт на заказ</h2><p class="sub">Выберите параметры — стоимость пересчитается сама.</p>
+<div class="cons">
+<div class="step"><h3><span>1.</span> Повод</h3><div class="opts" id="s1"></div></div>
+<div class="step"><h3><span>2.</span> Вес и формат</h3><div class="opts" id="s2"></div></div>
+<div class="step" id="fill"><h3><span>3.</span> Начинка</h3><div class="opts" id="s3"></div></div>
+<div class="step"><h3><span>4.</span> Декор и детали</h3><div class="two"><textarea id="txt" rows="2" placeholder="Надпись на торте или пожелания по оформлению"></textarea><input type="date" id="dt" aria-label="Дата праздника"></div></div>
+<div class="step"><h3>Итого</h3><div class="tot" id="tot"></div><p class="sub" style="margin:2px 0 14px">Ориентировочная стоимость, точную назовет кондитер.</p>
+<div class="two"><input id="nm" placeholder="Ваше имя" autocomplete="name"><input id="ph" type="tel" placeholder="Телефон" autocomplete="tel"></div>
+<div class="opts" id="s5" style="margin-bottom:16px"></div>
+<button class="btn" id="send">Отправить заявку кондитерской</button></div>
+</div></section>
+
+<section><h2>Почему выбирают «Мелиссу»</h2><p class="sub"></p><div class="adv">
+<div><i>🧈</i><h3>100% натуральный состав</h3><p>Настоящее сливочное масло, бельгийский шоколад и свежие ягоды — без маргарина.</p></div>
+<div><i>🥐</i><h3>Свежая витрина каждый день</h3><p>Десерты всегда в наличии, если сладкое нужно прямо сейчас.</p></div>
+<div><i>⏱️</i><h3>Срочные бенто-торты</h3><p>Приготовим и оформим индивидуальный тортик за 24 часа.</p></div>
+<div><i>📍</i><h3>Две кондитерские в центре</h3><p>И бережная доставка по городу.</p></div></div></section>
+
+<section id="contacts"><h2>Адреса и доставка</h2><p class="sub"></p><div class="ct"><div>
+<div class="addr"><b>г. Бугульма, ул. Советская, 40</b><br>Ежедневно 08:00–20:00</div>
+<div class="addr"><b>г. Бугульма, ул. Мусы Джалиля, 46</b><br>Ежедневно 08:00–20:00</div>
+<p>Телефон: <a href="tel:+79172464634"><b>+7 (917) 246-46-34</b></a><br>ВКонтакте: <a href="https://vk.ru" target="_blank" rel="noopener"><b>vk.ru</b></a></p></div>
+<svg class="map" viewBox="0 0 400 300" role="img" aria-label="Схема: две точки в Бугульме"><rect width="400" height="300" fill="none"/><path d="M0 210 L400 120 M120 0 L190 300 M0 60 L400 250" stroke="var(--ln)" stroke-width="10" fill="none"/>
+<g fill="var(--ac)"><circle cx="150" cy="170" r="11"/><circle cx="270" cy="120" r="11"/></g><g font-family="Manrope,sans-serif" font-size="13" fill="var(--tx)"><text x="150" y="198" text-anchor="middle">Советская, 40</text><text x="270" y="102" text-anchor="middle">Мусы Джалиля, 46</text><text x="200" y="285" text-anchor="middle" fill="var(--mut)">Схема расположения, Бугульма</text></g></svg></div></section>
+</div></main>
+<footer>© Кондитерский дом «Мелисса», Бугульма</footer>
+
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Корзина"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Ваш заказ</h2><button class="ic" id="x" style="border:0;cursor:pointer;color:var(--tx)" aria-label="Закрыть">✕</button></div>
+<div id="items" style="margin:10px 0"></div><div style="font-size:20px;font-weight:700;margin-bottom:14px">Сумма: <span id="sum">0 ₽</span></div>
+<div class="opts" id="dm" style="margin-bottom:14px"></div><input id="dn" placeholder="Ваше имя"><input id="dp" type="tel" placeholder="Телефон">
+<button class="btn" id="co">Оформить заказ</button></aside>
+<div class="md" id="md"><div style="font-size:44px">🎂</div><h2 id="mt">Спасибо!</h2><p id="mp"></p><button class="btn" id="mc">Закрыть</button></div>
+
+<script>
+const $=s=>document.querySelector(s),R=n=>n.toLocaleString("ru-RU")+" ₽";
+const P=[
+{id:1,c:"Бенто-торты",n:"Бенто-торт с вашей надписью",w:"450 г",p:1350,e:"🎂",g:"#f9d9d6,#e9a3a8",d:"Нежный бисквит, сливочный крем, ваша надпись."},
+{id:2,c:"Меренговые рулеты и пирожные",n:"Меренговый рулет с фисташкой и малиной",w:"900 г",p:1850,e:"🍓",g:"#fde8d8,#e8b4a0",d:"Воздушная меренга, фисташковый крем, малина."},
+{id:3,c:"Меренговые рулеты и пирожные",n:"Набор профитролей с заварным кремом",w:"",p:650,e:"🥯",g:"#f7e6c8,#dcb98a",d:"Заварное тесто, ванильный крем, шоколад."},
+{id:4,c:"ПП-десерты",n:"ПП-чизкейк без сахара",w:"180 г",p:390,e:"🧀",g:"#f6efe0,#d9c9a8",d:"Творожный сыр, миндальная основа, ягоды."},
+{id:5,c:"Торты на праздник",n:"Торт «Красный бархат» с вишней",w:"1,5 кг",p:3300,e:"🍒",g:"#f3c4c8,#b5495a",d:"Бархатные коржи, крем-чиз, вишневый конфи."},
+{id:6,c:"Торты на праздник",n:"Торт «Сникерс»",w:"1,5 кг",p:3100,e:"🍫",g:"#e8cfb8,#8b5a3c",d:"Шоколад, соленая карамель, арахис."},
+{id:7,c:"Подарочные наборы",n:"Подарочный набор «К чаю»",w:"600 г",p:1500,e:"🎁",g:"#f9d9d6,#d6a56e",d:"Макаронс, мини-тарталетки, безе, конфеты."},
+{id:8,c:"ПП-десерты",n:"ПП-тарталетка с ягодами",w:"140 г",p:320,e:"🫐",g:"#e4dff2,#9a8ec4",d:"Цельнозерновая основа, йогуртовый крем."}];
+const C=["Все десерты","Бенто-торты","Торты на праздник","Меренговые рулеты и пирожные","ПП-десерты","Подарочные наборы"];
+const OC=[["День рождения",0],["Свадьба / Юбилей",800],["Детский праздник",300],["Просто к чаю",0]];
+const SZ=[["Бенто-торт","0,45 кг",.45,1350],["Средний торт","1,5 кг",1.5,3300],["Большой торт","2,5 кг",2.5,5200],["Многоярусный","от 3,5 кг",3.5,7700]];
+const FL=[["Фисташка-малина","Фисташковый крем, малиновый конфи",400],["Сникерс","Шоколад, карамель, арахис",150],["Молочная девочка","Сгущенка, нежные коржи",0],["Красный бархат с вишней","Крем-чиз, вишня",200],["Манго-маракуйя","Тропический мусс",300]];
+const PK=["Самовывоз: ул. Советская, 40","Самовывоз: ул. Мусы Джалиля, 46","Доставка по Бугульме"];
+let cat=0,cart={},S={o:0,s:0,f:0,k:0},dm=0;
+function opts(el,arr,key,fn){const e=$(el);e.innerHTML=arr.map((a,i)=>`<button type="button" class="opt${S[key]===i?" on":""}" data-i="${i}">${fn(a)}</button>`).join("");e.onclick=ev=>{const b=ev.target.closest(".opt");if(!b)return;S[key]=+b.dataset.i;calc()}}
+function calc(){
+opts("#s1",OC,"o",a=>a[0]);opts("#s2",SZ,"s",a=>a[0]+"<small>"+a[1]+"</small>");opts("#s3",FL,"f",a=>a[0]+"<small>"+a[1]+"</small>");opts("#s5",PK,"k",a=>a);
+const z=SZ[S.s];S.t=Math.round((z[3]+FL[S.f][2]*z[2]+OC[S.o][1])/50)*50;$("#tot").textContent="≈ "+R(S.t)}
+function shop(){
+$("#tabs").innerHTML=C.map((c,i)=>`<button class="tab${i===cat?" on":""}" data-i="${i}">${c}</button>`).join("");
+$("#grid").innerHTML=P.filter(p=>!cat||p.c===C[cat]).map(p=>{const q=cart[p.id]||0;return `<article class="card"><div class="pi" style="background:linear-gradient(135deg,${p.g.split(",")[0]},${p.g.split(",")[1]})">${p.e}</div><div class="cb"><h3>${p.n}</h3><p>${p.d}</p><div class="pr"><span><b>${R(p.p)}</b> <small>${p.w}</small></span>${q?`<span class="qty"><button data-m="${p.id}" aria-label="Меньше">−</button>${q}<button data-a="${p.id}" aria-label="Больше">+</button></span>`:`<button class="add" data-a="${p.id}">В корзину</button>`}</div></div></article>`}).join("")}
+function cartUI(){
+const ids=Object.keys(cart);$("#cc").textContent=ids.reduce((s,i)=>s+cart[i],0);
+let sum=0;$("#items").innerHTML=ids.length?ids.map(i=>{const p=P.find(x=>x.id==i);sum+=p.p*cart[i];return `<div class="li"><span>${p.n}<br><small>${R(p.p)}</small></span><span class="qty"><button data-m="${i}">−</button>${cart[i]}<button data-a="${i}">+</button></span></div>`}).join(""):"<p class='sub'>Корзина пуста. Выберите что-нибудь вкусное!</p>";
+$("#sum").textContent=R(sum);$("#dm").innerHTML=PK.map((a,i)=>`<button class="opt${i===dm?" on":""}" data-d="${i}">${a}</button>`).join("");shop()}
+document.addEventListener("click",e=>{const t=e.target;
+if(t.dataset.a){cart[t.dataset.a]=(cart[t.dataset.a]||0)+1;cartUI()}
+if(t.dataset.m){if(--cart[t.dataset.m]<=0)delete cart[t.dataset.m];cartUI()}
+if(t.classList.contains("tab")){cat=+t.dataset.i;shop()}
+if(t.dataset.d){dm=+t.dataset.d;cartUI()}});
+const dr=on=>{$("#dr").classList.toggle("on",on);$("#ov").classList.toggle("on",on)};
+$("#cb").onclick=()=>dr(true);$("#x").onclick=$("#ov").onclick=()=>dr(false);
+function modal(t,p){$("#mt").textContent=t;$("#mp").textContent=p;$("#md").classList.add("on");$("#ov").classList.add("on")}
+$("#mc").onclick=()=>{$("#md").classList.remove("on");$("#ov").classList.remove("on")};
+const ok=(n,p)=>n.trim().length>1&&p.replace(/\D/g,"").length>=10;
+$("#send").onclick=()=>{if(!ok($("#nm").value,$("#ph").value))return modal("Почти готово","Укажите имя и телефон (не менее 10 цифр), чтобы кондитер мог с вами связаться.");
+modal("Заявка отправлена, "+$("#nm").value.trim()+"!","Торт: "+SZ[S.s][0]+", «"+FL[S.f][0]+"», ≈ "+R(S.t)+". Кондитерская перезвонит вам для уточнения деталей.")};
+$("#co").onclick=()=>{if(!Object.keys(cart).length)return modal("Корзина пуста","Добавьте десерты из витрины.");
+if(!ok($("#dn").value,$("#dp").value))return modal("Почти готово","Укажите имя и телефон (не менее 10 цифр).");
+dr(false);modal("Заказ оформлен!","Способ получения: "+PK[dm]+". Мы позвоним вам для подтверждения.");cart={};cartUI()};
+calc();cartUI();
+</script></body></html>
